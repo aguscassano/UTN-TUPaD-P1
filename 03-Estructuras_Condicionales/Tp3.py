@@ -155,7 +155,7 @@ hemi = input("Ingrese en que hemisferio se encuentra (N/S): ")
 mes = int(input("Ingrese el mes (1-12): "))
 dia = int(input("Ingrese que dia es (numero): "))
 
-# Validaciones básicas mínimas (solo rango general)
+
 if not (hemi in ("N", "n", "S", "s")):
     print("Hemisferio inválido (use N o S).")
 elif not (1 <= mes <= 12):
@@ -163,35 +163,25 @@ elif not (1 <= mes <= 12):
 elif not (1 <= dia <= 31):
     print("Día inválido (1-31).")
 else:
-    # 21/12–20/03
     if (mes == 12 and dia >= 21) or (mes == 1) or (mes == 2) or (mes == 3 and dia <= 20):
         if hemi == "N" or hemi == "n":
             print("Invierno")
-        else:  # S o s
+        else:  
             print("Verano")
-
-    # 21/03–20/06
     elif (mes == 3 and dia >= 21) or (mes == 4) or (mes == 5) or (mes == 6 and dia <= 20):
         if hemi == "N" or hemi == "n":
             print("Primavera")
         else:
             print("Otoño")
-
-    # 21/06–20/09
     elif (mes == 6 and dia >= 21) or (mes == 7) or (mes == 8) or (mes == 9 and dia <= 20):
         if hemi == "N" or hemi == "n":
             print("Verano")
         else:
             print("Invierno")
-
-    # 21/09–20/12
     elif (mes == 9 and dia >= 21) or (mes == 10) or (mes == 11) or (mes == 12 and dia <= 20):
         if hemi == "N" or hemi == "n":
             print("Otoño")
         else:
             print("Primavera")
-
     else:
-        # Si cae acá, probablemente el día no existe para ese mes (p.ej. 31/04),
-        # pero como no usamos listas/validaciones avanzadas, avisamos genéricamente:
         print("Fecha fuera de los rangos considerados.")
