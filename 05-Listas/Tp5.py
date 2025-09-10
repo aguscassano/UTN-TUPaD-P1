@@ -61,5 +61,48 @@ print("Lista par", lista_par, "hay", contador_par, "numeros pares")
 print ("Lista impar", lista_impar, "hay", contador_impar, "numeros impares")
 
 
+#4) Dada una lista con valores repetidos:
+#• Crear una nueva lista sin elementos repetidos.
+#• Mostrar el resultado.
+
+datos = [1, 3, 5, 3, 7, 1, 9, 5, 3]
+
+datos_sin_repetir = list(set(datos))
+print("La nueva lista es: ", datos_sin_repetir)
+
+
+#5) Crear una lista con los nombres de 8 estudiantes presentes en clase.
+#• Preguntar al usuario si quiere agregar un nuevo estudiante o eliminar uno existente.
+#• Mostrar la lista final actualizada.
+
+presentes = ["Agustin", "Francisco", "Celeste", "Franco", "Martina", "Matias", "Gaspar", "Sergio"]
+
+print ("El listado de alumnos presentes es: ", presentes)
+continuar = input("Si desea agregar un alumno presione A, si desea eliminar un alumno presione E, si desea continuar presione cualquier otra tecla ")
+
+
+if continuar == "A" or continuar == "a":
+    presentes.append(input("Ingrese el nombre que desea agregar: "))
+elif continuar == "E" or continuar == "e":
+    presentes.remove(input("Ingrese el nombre que desea elminar: "))
+else:
+    pass
+
+print("El listado de alumnos presentes es: ", presentes)
+
+#6) Dada una lista con 7 números, rotar todos los elementos una posición hacia la derecha (el último pasa a ser el primero).
+
+num_siete = [3, 8, 9, 11, 32, 55, 2]
+
+for i in range (0, 7):
+    num_siete[0] = num_siete [1]
+    num_siete[1] = num_siete [2]
+    num_siete[2] = num_siete [3]
+    num_siete[3] = num_siete [4]
+    num_siete[4] = num_siete [5]
+    num_siete[5] = num_siete [0]
+    
+print (num_siete)
+
 
 
