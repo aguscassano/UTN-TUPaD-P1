@@ -1,0 +1,3 @@
+Manzana,200,9
+Banana,400,5
+Pera,700,12
